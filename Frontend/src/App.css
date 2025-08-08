@@ -1,0 +1,275 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  background-color: #2c3e50; /* Dark blue/gray */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-button {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Content Area */
+.content {
+  flex-grow: 1; /* Allows content to take up available space */
+  padding: 20px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: auto; /* Pushes footer to the bottom */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer h3 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+/* --- Common Form & Table Styles --- */
+
+/* Titles within components */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 2em;
+}
+
+/* Table Styles (for AllEmployees) */
+.data-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 30px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* For rounded corners to apply to content */
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #34495e; /* Darker header background */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.data-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Form Styles (for AddEmployee & EditEmployee) */
+.employee-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-table {
+  width: 100%;
+  border-collapse: separate; /* Use separate for spacing */
+  border-spacing: 0 15px; /* Add vertical spacing between rows */
+}
+
+.form-table td {
+  padding: 5px 0; /* Adjust padding for cells */
+}
+
+.form-table td:first-child {
+  font-weight: bold;
+  color: #555;
+  width: 120px; /* Give labels a fixed width */
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="tel"] { /* Assuming contact could be type tel */
+  width: calc(100% - 20px); /* Adjust width considering padding */
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.form-table input[type="text"]:focus,
+.form-table input[type="email"]:focus,
+.form-table input[type="tel"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form-table input[type="submit"] {
+  background-color: #28a745; /* Green for submit */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Reset width to auto */
+  margin-top: 20px; /* Space above button */
+}
+
+.form-table input[type="submit"]:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+.form-table input[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Action Buttons within tables (Edit/Delete) */
+.action-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* For Link/a tag */
+  display: inline-block; /* For Link/a tag */
+  text-align: center;
+}
+
+.edit-button {
+  background-color: #007bff; /* Blue for edit */
+  color: white;
+  margin-right: 5px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545; /* Red for delete */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Message Styles */
+.message {
+  text-align: center;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .nav-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .data-table {
+    width: 98%;
+    font-size: 0.9em;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 10px;
+  }
+
+  .employee-form {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .form-table td:first-child {
+    width: 90px;
+  }
+}
